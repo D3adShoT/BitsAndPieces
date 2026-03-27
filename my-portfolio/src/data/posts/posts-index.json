@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "omni-studio-best-practices",
+    "title": "OmniStudio Best Practices for Enterprise Orgs",
+    "date": "2025-02-10",
+    "excerpt": "Lessons learned from large-scale OmniStudio implementations — DataRaptors, performance tuning, and debugging complex Integration Procedures.",
+    "tags": ["OmniStudio", "Best Practices", "DataRaptors", "Enterprise"]
+  },
+  {
+    "slug": "hello-salesforce-spring-25",
+    "title": "Salesforce Spring '25 Release: Top Features for Developers",
+    "date": "2025-01-15",
+    "excerpt": "A roundup of the most impactful Spring '25 features for Salesforce developers — LWC enhancements, Apex improvements, and new Flow capabilities.",
+    "tags": ["Release Notes", "Spring '25", "LWC", "Apex", "Flow"]
+  }
+]

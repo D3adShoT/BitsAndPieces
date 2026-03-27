@@ -1,0 +1,30 @@
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.group {}
+
+.groupTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.625rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  border-radius: var(--radius-full);
+  padding: 0.3rem 0.85rem;
+  transition: background 0.15s;
+}
