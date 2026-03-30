@@ -5,7 +5,10 @@ export default function Navbar() {
   return (
     <header className={styles.navbar}>
       <div className={`container ${styles.inner}`}>
-        <span className={styles.brand}>BitCrafts</span>
+        <span className={styles.brand}>
+          <img src="/favicon.svg" alt="" className={styles.logo} aria-hidden="true" />
+          BitCrafts
+        </span>
         <nav className={styles.nav}>
           <NavLink
             to="/"
