@@ -5,14 +5,14 @@ export default function Navbar() {
   return (
     <header className={styles.navbar}>
       <div className={`container ${styles.inner}`}>
-        <span className={styles.brand}>Agraj Mishra</span>
+        <span className={styles.brand}>BitCrafts</span>
         <nav className={styles.nav}>
           <NavLink
             to="/"
             end
             className={({ isActive }) => isActive ? `${styles.link} ${styles.active}` : styles.link}
           >
-            Portfolio
+            About me
           </NavLink>
           <NavLink
             to="/blog"

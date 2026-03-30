@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev       # Start dev server at http://localhost:5173 (HMR active)
+npm run dev       # Start dev server at http://localhost:5173 (HMR active; may use 5174+ if port taken)
 npm run build     # Production build → dist/
 npm run preview   # Serve dist/ at http://localhost:4173
 npm run lint      # ESLint
@@ -15,7 +15,7 @@ No test suite is configured.
 
 ## Architecture
 
-Two-tab React SPA: **Portfolio** (`/`) and **Blog** (`/blog`, `/blog/:slug`).
+Two-tab React SPA: **About me** (`/`) and **Blog** (`/blog`, `/blog/:slug`). Site brand is **BitCraft**.
 
 **Core principle: all content lives in data files, never in components.**
 

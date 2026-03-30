@@ -7,18 +7,56 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies & Build
 node_modules
 dist
 dist-ssr
 *.local
 
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+.vscode/settings.json
+.vscode/launch.json
 .idea
+*.sublime-project
+*.sublime-workspace
+
+# OS Files
 .DS_Store
+Thumbs.db
+desktop.ini
+Icon?
+.AppleDouble/
+.LSOverride
+
+# Editor temp files
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*~
+*.swp
+*.swo
+
+# Caches
+.cache/
+.npm/
+.turbo/
+.next/
+.gatsby/
+
+# Coverage & Testing
+coverage/
+.nyc_output/
+
+# Tooling
+.superpowers/

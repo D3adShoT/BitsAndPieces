@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
-        <span className={styles.copy}>© {new Date().getFullYear()} Agraj Naman Mishra</span>
+        <span className={styles.copy}>© {new Date().getFullYear()} BitCrafts</span>
         <div className={styles.links}>
           <a href={`mailto:${contact.email}`} className={styles.link} aria-label="Email">
             {contact.email}

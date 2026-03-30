@@ -86,29 +86,33 @@ const portfolio = {
       name: "Custom Salesforce Forecasting Application",
       tech: ["LWC", "Apex", "Lightning Pages"],
       bullets: [
-        "Developed a custom application to calculate actual vs. forecasted revenue, improving financial visibility.",
-        "Implemented event-driven LWC architecture for optimal performance and a CSV upload feature, reducing manual data entry by ~30%.",
+        "Built a custom revenue forecasting application with event-driven LWC architecture to calculate actual vs. forecasted revenue, enhancing financial visibility and decision-making.",
+        "Engineered a CSV upload feature that reduced manual data entry by ~30%, improving operational efficiency and data accuracy.",
+        "Designed and implemented optimal performance patterns through event-driven architecture, ensuring responsive user interactions at scale.",
       ],
     },
     {
       name: "Automated Email-to-Case System for Deal Desk",
       tech: ["Apex", "Email Services", "Custom Settings"],
       bullets: [
-        "Created a round-robin assignment system with Out-of-Office logic, increasing team productivity and ensuring fair distribution.",
+        "Designed and built a round-robin case assignment system with intelligent Out-of-Office logic, ensuring equitable workload distribution across the deal desk team.",
+        "Increased team productivity and case handling efficiency by automating case creation from inbound emails, reducing manual administrative overhead.",
       ],
     },
     {
       name: "Opportunity Guided Entry Flow",
       tech: ["LWC", "Apex", "Triggers"],
       bullets: [
-        "Built an LWC-guided flow for opportunity nurturing, reducing entry errors and accelerating the sales process for the division.",
+        "Engineered an interactive LWC-guided flow for opportunity management that standardized data entry processes and reduced entry errors across the sales division.",
+        "Accelerated sales cycle velocity by implementing guided workflows that streamlined the opportunity nurturing process and enforced data quality standards.",
       ],
     },
     {
       name: "CPQ Integration & Custom Approval Automation",
       tech: ["OmniStudio", "Apex", "Email Services"],
       bullets: [
-        "Established integration between Salesforce and a custom CPQ system and automated approval processes using a bot user.",
+        "Architected bidirectional integration between Salesforce and a custom CPQ system using OmniStudio, enabling seamless quote generation and order management workflows.",
+        "Implemented automated approval routing and notifications using a bot user framework, eliminating manual approval bottlenecks and accelerating deal closure timelines.",
       ],
     },
   ],
