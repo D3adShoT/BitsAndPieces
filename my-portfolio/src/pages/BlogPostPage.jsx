@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import TagBadge from '../components/blog/TagBadge.jsx'
+import Engagement from '../components/blog/Engagement.jsx'
+import Comments from '../components/blog/Comments.jsx'
+import { fetchPost } from '../services/sheetsApi.js'
 import styles from './BlogPostPage.module.css'
-
-const postModules = import.meta.glob('../data/posts/*.json')
 
 export default function BlogPostPage() {
   const { slug } = useParams()
@@ -11,13 +12,13 @@ export default function BlogPostPage() {
   const [notFound, setNotFound] = useState(false)
 
   useEffect(() => {
-    const key = `../data/posts/${slug}.json`
-    const loader = postModules[key]
-    if (!loader) {
-      setNotFound(true)
-      return
-    }
-    loader().then(m => setPost(m.default))
+    let cancelled = false
+    fetchPost(slug).then(data => {
+      if (cancelled) return
+      if (!data) setNotFound(true)
+      else setPost(data)
+    })
+    return () => { cancelled = true }
   }, [slug])
 
   if (notFound) {
@@ -60,6 +61,8 @@ export default function BlogPostPage() {
           className="blog-content"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
+        <Engagement slug={slug} initialLikes={post.likes} initialShares={post.shares} />
+        <Comments slug={slug} />
       </div>
     </div>
   )

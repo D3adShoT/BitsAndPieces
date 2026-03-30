@@ -60,3 +60,7 @@ coverage/
 
 # Tooling
 .superpowers/
+
+# Google Sheets API key (if ever used directly)
+service-account.json
+credentials.json

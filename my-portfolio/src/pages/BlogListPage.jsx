@@ -1,8 +1,19 @@
-import postsIndex from '../data/posts/posts-index.json'
+import { useEffect, useState } from 'react'
+import { fetchPostsList } from '../services/sheetsApi.js'
 import PostCard from '../components/blog/PostCard.jsx'
 import styles from './BlogListPage.module.css'
 
 export default function BlogListPage() {
+  const [posts, setPosts] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    fetchPostsList()
+      .then(data => { setPosts(data); setLoading(false) })
+      .catch(() => { setError('Failed to load posts.'); setLoading(false) })
+  }, [])
+
   return (
     <div className="container">
       <div className={styles.header}>
@@ -13,11 +24,12 @@ export default function BlogListPage() {
         </p>
       </div>
       <div className={styles.list}>
-        {postsIndex.length === 0 ? (
+        {loading && <p className={styles.empty}>Loading posts…</p>}
+        {error && <p className={styles.empty}>{error}</p>}
+        {!loading && !error && posts.length === 0 && (
           <p className={styles.empty}>No posts yet. Check back soon.</p>
-        ) : (
-          postsIndex.map(post => <PostCard key={post.slug} post={post} />)
         )}
+        {!loading && !error && posts.map(post => <PostCard key={post.slug} post={post} />)}
       </div>
     </div>
   )
