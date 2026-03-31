@@ -2,6 +2,12 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Plans
+
+Implementation plans are stored in `Plans/` at the project root.
+
+- `Plans/Plan_Mar30.md` — Google Sheets backend for blog (posts, comments, likes, shares); proxy setup; agent publishing workflow
+
 ## Commands
 
 ```bash
